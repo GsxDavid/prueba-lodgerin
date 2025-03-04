@@ -9,17 +9,17 @@ module.exports = {
     "dialect": process.env.DB_DIALECT
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": process.env.DB_USERNAME_TEST || "root",
+    "password": process.env.DB_PASSWORD_TEST || null,
+    "database": process.env.DB_DATABASE_TEST || "lodgerin_test",
+    "host": process.env.DB_HOST_TEST || "127.0.0.1",
+    "dialect": process.env.DB_DIALECT_TEST || "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": process.env.DB_USERNAME_PROD || "root",
+    "password": process.env.DB_PASSWORD_PROD || null,
+    "database": process.env.DB_DATABASE_PROD || "lodgerin_production",
+    "host": process.env.DB_HOST_PROD || "127.0.0.1",
+    "dialect": process.env.DB_DIALECT_PROD || "postgres"
   }
 }
