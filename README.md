@@ -12,17 +12,35 @@ Desarrollo de prueba técnica para el cargo `Backend Junior` utilizando express,
 
 ## Instalación
 
-1. Instalar dependencias
+Sigue estos pasos para configurar y ejecutar la aplicación correctamente.
 
-    ```bash
-        npm install
-    ```
-2. Crear archivo `.env` y definir las variables de entorno para conexión a base de datos y configuración de la aplicación.
+### 1️⃣ Instalar dependencias
 
-    ```bash
-        cp .env.example .env
-    ```
+Ejecuta el siguiente comando para instalar las dependencias del proyecto:  
 
+```bash
+    npm install
+```
+
+### 2️⃣ Crear archivo `.env` y definir las variables de entorno para conexión a base de datos y configuración de la aplicación.
+
+Copia el archivo de ejemplo .env.example y renómbralo como .env. Luego, edítalo con la configuración de tu base de datos y otras variables necesarias como el puerto de la aplicación.
+
+```bash
+    cp .env.example .env
+```
+
+### 3️⃣ Generar clave secreta para JWT
+
+Para garantizar la seguridad de los tokens, es necesario generar un secreto aleatorio para JWT. Para esto ejecuta el siguiente comando
+    
+```bash
+    npm run generate:jwt-secret
+```
+
+Deberías ver el siguiente mensaje en consola al ejecutar el comando ✅
+
+>       JWT_SECRET generado y actualizado en .env
 
 
 ## Crear la base de datos y ejecutar migraciones en Sequelize
