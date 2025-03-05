@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: Atom235*
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    build: .
+    container_name: node_api
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: admin
+      DB_PASSWORD: Atom235*
+      DB_NAME: mydatabase
+      DB_PORT: 5432
+      APP_PORT: 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    entrypoint: ["/app/entrypoint.sh"]
+
+volumes:
+  postgres_data:
