@@ -18,7 +18,7 @@ swaggerDocs(app);
 // Sincronizar la base de datos y arrancar el servidor
 db.sequelize.sync().then(() => {
     console.log('Base de datos sincronizada');
-    app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}`));
+    app.listen(PORT, () => console.log(`El servidor se está ejecutando en el puerto ${PORT}`));
 }).catch(error => {
     console.error('Error sincronizando la base de datos:', error);
 });
