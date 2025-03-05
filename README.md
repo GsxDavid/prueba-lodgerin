@@ -2,6 +2,8 @@
 
 Desarrollo de prueba técnica para el cargo `Backend Junior` utilizando express, Sequelize y Jest.
 
+![image](https://github.com/user-attachments/assets/40350176-6a01-47e0-bb74-e6c497eb3a51)
+
 ## Tabla de Contenidos
 
 - [Dependencias](#dependencias)
